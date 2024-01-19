@@ -7,8 +7,8 @@ console.log(`Hello ${v}`);
 
 //asynchronous code
 function sleep(millis) {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
+    return new Promise((resolve, reject) => { //callback function : passing function as argument
+      setTimeout(() => {//call back function
         console.log("Executed after some seconds");
         resolve(`Slept for ${millis} milliseconds`);
       }, millis);
@@ -17,7 +17,7 @@ function sleep(millis) {
   
   // Example usage with .then()
   sleep(2000)
-    .then(result => {
+    .then(result => {  // handling the output of promises
       console.log(result);
     })
     .catch(error => {
