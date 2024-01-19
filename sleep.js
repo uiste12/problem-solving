@@ -1,9 +1,11 @@
+//synchronous code
 let a = 5;
 console.log(`the value is ${a} `);
 
 let v= "World";
 console.log(`Hello ${v}`);
 
+//asynchronous code
 function sleep(millis) {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
