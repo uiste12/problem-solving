@@ -8,6 +8,10 @@ console.log(`Hello ${v}`);
 //asynchronous code
 function sleep(millis) {
     return new Promise((resolve, reject) => { //callback function : passing function as argument
+        if (millis> 5000){
+            const errormessage="Sleep time exceeds 5000 milliseconds";
+            reject(errormessage);}
+        else
       setTimeout(() => {//call back function
         console.log("Executed after some seconds");
         resolve(`Slept for ${millis} milliseconds`);
@@ -16,7 +20,7 @@ function sleep(millis) {
   }
   
   // Example usage with .then()
-  sleep(2000)
+  sleep(6000)
     .then(result => {  // handling the output of promises
       console.log(result);
     })
